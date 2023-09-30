@@ -1,5 +1,33 @@
 <!-- @format -->
 
+# Reticulum: A Two-Layer Blockchain Sharding Protocol
+
+
+
+
+
+### Commands for configuring the environment：
+
+- If you use AWS as our provided, you don't need to configure the environment. Otherwise, if you use your own machine, please use the following commands to do that.
+
+```chmod +x start.sh
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt update
+sudo apt install golang-1.19
+echo 'export PATH="/usr/lib/go-1.19/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+go version
+go mod init example.com/m
+go mod init example.com/m/v2
+go get gopkg.in/yaml.v2
+go get -u github.com/stretchr/testify
+go get -u github.com/mr-tron/base58
+```
+
+
+
+
+
 - There are 16 experiments of Reticulum totally with four kind of attacks(average, bankrun, suicidal, worst) and four Pa ratio(10%,20%,30%,33%) 
 - 16 experiments are in different folder, such as 'Reti_code_average_10' means the experiment of Reticulum under average attack and Pa=10%.
 
