@@ -119,17 +119,17 @@ func (bc *PSchain) Run(node *Node, cc *CSchain) {
 						node.timerExpired1 = true
 						node.timerExpired2 = false
 						if node.addps {
-							fmt.Println(bc.NodeID, "'s epoch", temp_psblock.Epoch, "add process block in time-bound-1 successfully!")
+							//fmt.Println(bc.NodeID, "'s epoch", temp_psblock.Epoch, "add process block in time-bound-1 successfully!")
 						} else {
 							bc.GenerateBlock(node)
-							fmt.Println(node.ID, "再次尝试出块,此时vote summary是", node.VoteSummary)
+							//fmt.Println(node.ID, "再次尝试出块,此时vote summary是", node.VoteSummary)
 							if node.addps == false {
-								fmt.Println(bc.NodeID, "'s epoch", temp_psblock.Epoch, "failed to add block in time-bound-1.")
+								//fmt.Println(bc.NodeID, "'s epoch", temp_psblock.Epoch, "failed to add block in time-bound-1.")
 								bc.BlockQueue_send <- temp_psblock
 							}
 						}
 					})
-					fmt.Println(bc.NodeID, "Turn on time-bound-1 countdown")
+					//fmt.Println(bc.NodeID, "Turn on time-bound-1 countdown")
 					if temp_psblock.Origin != bc.NodeID && !contains(node.Advepoch, int(temp_psblock.Epoch)) {
 						temp_txslice := new(TransactionSlice)
 						err := temp_txslice.UnmarshalBinary(temp_psblock.Data)
@@ -182,7 +182,7 @@ func (bc *PSchain) Run(node *Node, cc *CSchain) {
 					go bc.insertvote_delay(temp_vote)
 				}
 			} else if temp_vote.Epoch > int16(bc.Len)+1 {
-				fmt.Println(bc.NodeID, "receive", temp_vote.Origin, "epoch", temp_vote.Epoch, "'s vote")
+				//fmt.Println(bc.NodeID, "receive", temp_vote.Origin, "epoch", temp_vote.Epoch, "'s vote")
 				go bc.insertvote_delay(temp_vote)
 			} else {
 			}

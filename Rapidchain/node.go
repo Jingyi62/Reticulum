@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"time"
 )
@@ -213,11 +212,11 @@ func producePSBlocks(node *Node, n *Network, bc *PSchain) {
 					sentBlockepoch++
 				}
 			} else {
-				fmt.Println("当前CSchainlen", CSchainlen)
+				//fmt.Println("当前CSchainlen", CSchainlen)
 				time.Sleep(1 * time.Second)
 			}
 		} else {
-			fmt.Println("当前PSchainlen", PSchainlen)
+			//fmt.Println("当前PSchainlen", PSchainlen)
 			time.Sleep(1 * time.Second)
 		}
 	}

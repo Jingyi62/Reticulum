@@ -1,6 +1,0 @@
-ID: node1, Addr: localhost:9001
-ID: node2, Addr: localhost:9002
-ID: node3, Addr: localhost:9003
-ID: node4, Addr: localhost:9004
-ID: node5, Addr: localhost:9005
-ID: node6, Addr: localhost:9006

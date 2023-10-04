@@ -72,7 +72,7 @@ func SetTime2(cc *CSchain, bc *PSchain, node *Node) {
 			}
 
 			node.T2 = (psincs - count + 1) * lamda
-			fmt.Println(node.ID, "Now begin the T2", node.T2)
+			//fmt.Println(node.ID, "Now begin the T2", node.T2)
 			Endepoch(cc, bc, node)
 
 		}
@@ -232,7 +232,7 @@ func (cc *CSchain) Run(bc *PSchain, node *Node) {
 					} else {
 						nowvote.Nodeid = append(nowvote.Nodeid, temp_vote3.Origin)
 						cc.Vote4votesummary_vote3.Store(temp_vote3.VoteSummaryHash, votesummarystatus{nowvote.Num + 1, nowvote.Nodeid, nowvote.Votesummary})
-						fmt.Println(bc.NodeID, "--------:recevied vote_final of votesummary from", temp_vote3.Origin)
+						//fmt.Println(bc.NodeID, "--------:recevied vote_final of votesummary from", temp_vote3.Origin)
 						if (cc.Save_votesummary(node)) && (node.addps == false) {
 							bc.GenerateBlock(node)
 						}
@@ -265,12 +265,12 @@ func (cc *CSchain) Save_votesummary(node *Node) bool {
 			node.VoteSummary = *blockvotestatus.Votesummary
 			cc.Vote4votesummary_vote2.Delete(key)
 			cc.Vote4votesummary_vote3.Delete(key)
-			fmt.Println(cc.NodeID, "--------:Votesummary", node.VoteSummary.Epoch, "reached consensus")
+			//fmt.Println(cc.NodeID, "--------:Votesummary", node.VoteSummary.Epoch, "reached consensus")
 			err := os.MkdirAll("./data/"+cc.NodeID+"/Votesummary", os.ModePerm)
 			if err != nil {
 			}
 			SaveVotesummaryToFile(cc.CurrentVoteSummary, "./data/"+cc.NodeID+"/Votesummary/"+strconv.Itoa(int(node.VoteSummary.Epoch)))
-			fmt.Println(cc.NodeID, "--------:Votesummary", node.VoteSummary.Epoch, "is saved")
+			//fmt.Println(cc.NodeID, "--------:Votesummary", node.VoteSummary.Epoch, "is saved")
 			node.PSchain.GenerateBlock(node)
 			node.ifsavevotesummary = true
 			//node.VoteSummary = VoteSummary{}
