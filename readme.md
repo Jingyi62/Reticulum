@@ -29,8 +29,8 @@ go get -u github.com/mr-tron/base58
 
 #### Notes:
 
-- There are 16 experiments of Reticulum totally with four kind of attacks (average, bankrun, suicidal, worst) and four $P_a$ ratio (10%,20%,30%,33%)
-- 16 experiments are in different folder, such as 'Reti_code_average_10' means the experiment of Reticulum under average attack in $P_a$ = 10%; "Reti_code_suicidal_33" means the experiment of Recticulum under suicidal attack in $P_a$ = 33%.
+- There are 16 experiments of Reticulum totally with four kind of attacks (average, bankrun, suicidal, worst) and four $P_{a-run}$ ratio (10%,20%,30%,33%)
+- 16 experiments are in different folder, such as 'Reti_code_average_10' means the experiment of Reticulum under average attack in $P_{a-run}$ = 10%; "Reti_code_suicidal_33" means the experiment of Recticulum under suicidal attack in $P_{a-run}$ = 33%.
 
 **How to Run?**
 
