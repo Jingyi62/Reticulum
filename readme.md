@@ -42,5 +42,3 @@ go get -u github.com/mr-tron/base58
 ### 2. The simulation of Gearbox
 
 - You can see the exact simulation steps via 'Gearbox.ipynb'
-
-```
