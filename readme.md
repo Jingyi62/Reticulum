@@ -43,24 +43,4 @@ go get -u github.com/mr-tron/base58
 
 - You can see the exact simulation steps via 'Gearbox.ipynb'
 
-#### How to cite:
-For the paper:
-```
-@inproceedings{ndss2024-xu,
-  title = {A Two-Layer Blockchain Sharding Protocol Leveraging Safety and Liveness for Enhanced Performance},
-  author = {Yibin Xu and Jingyi Zheng and Boris Düdder and Yongluan Zhou and Tijs Slaats},
-  booktitle = {Proceedings of the 2024 Network and Distributed System Security (NDSS) Symposium},
-  year = {2024},
-  address = {San Diego, California},
-  month = {February 26 - March 1},
-}
-```
-For the code project:
-```
-@misc{githubGitHubJingyiZhengReticulum,
-	author = {Jingyi Zheng},
-	title = {{R}eticulum source code},
-	howpublished = {\url{https://github.com/Jingyi-Zheng/Reticulum/}},
-	year = {2023},
-}
 ```
