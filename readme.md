@@ -58,7 +58,7 @@ For the paper:
 For the code project:
 ```
 @misc{githubGitHubJingyiZhengReticulum,
-	author = {Jingyi Zheng, Yibin Xu},
+	author = {Jingyi Zheng},
 	title = {{R}eticulum source code},
 	howpublished = {\url{https://github.com/Jingyi-Zheng/Reticulum/}},
 	year = {2023},
